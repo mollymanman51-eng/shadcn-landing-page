@@ -18,7 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br" suppressHydrationWarning>
-      <body className={cn("min-h-screen bg-background", inter.className)}>
+      <body
+  className={cn(
+    "min-h-screen bg-background text-foreground antialiased",
+    inter.className
+  )}
+>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
