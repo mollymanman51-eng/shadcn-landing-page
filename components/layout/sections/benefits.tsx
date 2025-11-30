@@ -10,28 +10,28 @@ interface BenefitsProps {
 
 const benefitList: BenefitsProps[] = [
   {
-    icon: "Blocks",
-    title: "Build Brand Trust",
+    icon: "Brain",
+    title: "高情商回怼",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "AI 深度学习海量语录，精准识别对方意图，用最体面的方式让对方闭嘴，适合职场、家庭等需要留面子的场合。",
   },
   {
-    icon: "LineChart",
-    title: "More Leads",
+    icon: "Zap",
+    title: "秒速生成",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, natus consectetur.",
+      "无需长时间等待，实时分析对话内容，三秒内生成多个版本的回击文案，让你在吵架的黄金时间内完成绝杀。",
   },
   {
-    icon: "Wallet",
-    title: "Higher Conversions",
+    icon: "Smile",
+    title: "情绪护盾",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consectetur. A odio velit cum aliquam",
+      "帮你过滤负面情绪，把愤怒转化为幽默或犀利的语言。你只需要负责复制粘贴，保持优雅，气死对方。",
   },
   {
-    icon: "Sparkle",
-    title: "Test Marketing Ideas",
+    icon: "ShieldCheck",
+    title: "隐私保护",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "所有对话内容仅用于即时生成，不做任何云端存储。你的吐槽和秘密绝对安全，放心大胆地把这里当树洞。",
   },
 ];
 
@@ -40,15 +40,13 @@ export const BenefitsSection = () => {
     <section id="benefits" className="container py-24 sm:py-32">
       <div className="grid lg:grid-cols-2 place-items-center lg:gap-24">
         <div>
-          <h2 className="text-lg text-primary mb-2 tracking-wider">Benefits</h2>
+          <h2 className="text-lg text-primary mb-2 tracking-wider">核心优势</h2>
 
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Your Shortcut to Success
+            让每一次反击都掷地有声
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
-            ducimus reprehenderit architecto rerum similique facere odit
-            deleniti necessitatibus quo quae.
+            别再事后躺在床上后悔没发挥好。AI 嘴替是你最忠实的僚机，无论是阴阳怪气还是据理力争，我们让你永远立于不败之地。
           </p>
         </div>
 

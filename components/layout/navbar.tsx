@@ -36,36 +36,36 @@ interface FeatureProps {
 const routeList: RouteProps[] = [
   {
     href: "#testimonials",
-    label: "Testimonials",
+    label: "用户评价",
   },
   {
     href: "#team",
-    label: "Team",
+    label: "关于我们",
   },
   {
     href: "#contact",
-    label: "Contact",
+    label: "联系作者",
   },
   {
     href: "#faq",
-    label: "FAQ",
+    label: "常见问题",
   },
 ];
 
 const featureList: FeatureProps[] = [
   {
-    title: "Showcase Your Value ",
-    description: "Highlight how your product solves user problems.",
+    title: "一键回怼",
+    description: "输入对方的话，AI 瞬间生成神回复。",
   },
   {
-    title: "Build Trust",
+    title: "多种风格",
     description:
-      "Leverages social proof elements to establish trust and credibility.",
+      "阴阳怪气、发疯文学、讲道理，总有一款适合你。",
   },
   {
-    title: "Capture Leads",
+    title: "复制分享",
     description:
-      "Make your lead capture form visually appealing and strategically.",
+      "一键复制，快速发送，让对方无言以对。",
   },
 ];
 
@@ -75,7 +75,7 @@ export const Navbar = () => {
     <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
       <Link href="/" className="font-bold text-lg flex items-center">
         <ChevronsDown className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white" />
-        Shadcn
+        AI 嘴替
       </Link>
       {/* <!-- Mobile --> */}
       <div className="flex items-center lg:hidden">
@@ -96,7 +96,7 @@ export const Navbar = () => {
                 <SheetTitle className="flex items-center">
                   <Link href="/" className="flex items-center">
                     <ChevronsDown className="bg-gradient-to-tr border-secondary from-primary via-primary/70 to-primary rounded-lg w-9 h-9 mr-2 border text-white" />
-                    Shadcn
+                    AI 嘴替
                   </Link>
                 </SheetTitle>
               </SheetHeader>
@@ -130,7 +130,7 @@ export const Navbar = () => {
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger className="bg-card text-base">
-              Features
+              核心功能
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <div className="grid w-[600px] grid-cols-2 gap-5 p-4">

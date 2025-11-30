@@ -10,40 +10,40 @@ interface FeaturesProps {
 
 const featureList: FeaturesProps[] = [
   {
-    icon: "TabletSmartphone",
-    title: "Mobile Friendly",
+    icon: "BrainCircuit",
+    title: "智能语义理解",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
+      "不是简单的关键词匹配，而是真正理解对方的弦外之音，反击更精准。",
   },
   {
-    icon: "BadgeCheck",
-    title: "Social Proof",
+    icon: "Sparkles",
+    title: "多风格切换",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
+      "从优雅反讽到火力全开，5 种不同的回怼强度，应对不同场合。",
   },
   {
-    icon: "Goal",
-    title: "Targeted Content",
+    icon: "Copy",
+    title: "一键复制使用",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. odio ea accusamus aperiam.",
+      "生成的金句一键复制，直接粘贴到聊天框，不给对方反应时间。",
   },
   {
-    icon: "PictureInPicture",
-    title: "Strong Visuals",
+    icon: "Clock",
+    title: "24/7 随时待命",
     description:
-      "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
+      "无论深夜还是清晨，只要你需要，AI 嘴替随时准备为你出谋划策。",
   },
   {
-    icon: "MousePointerClick",
-    title: "Clear CTA",
+    icon: "MessageCircle",
+    title: "上下文记忆",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
+      "支持连续对话模式，根据对方的后续反应，生成更具针对性的追击。",
   },
   {
-    icon: "Newspaper",
-    title: "Clear Headline",
+    icon: "Lock",
+    title: "隐私安全保障",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
+      "采用端到端加密传输，你的每一次吐槽和反击都不会被第三方知晓。",
   },
 ];
 
@@ -51,17 +51,16 @@ export const FeaturesSection = () => {
   return (
     <section id="features" className="container py-24 sm:py-32">
       <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
-        Features
+        核心功能
       </h2>
 
       <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-        What Makes Us Different
+        为什么选择 AI 嘴替？
       </h2>
 
       <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
-        fugiat, odit similique quasi sint reiciendis quidem iure veritatis optio
-        facere tenetur.
+        我们不仅仅是生成文字，更是你情绪的出口和沟通的武器。
+        用科技的力量，让每一次对话都变得轻松掌控。
       </h3>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

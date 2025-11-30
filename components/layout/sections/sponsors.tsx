@@ -11,40 +11,40 @@ interface sponsorsProps {
 
 const sponsors: sponsorsProps[] = [
   {
-    icon: "Crown",
-    name: "Acmebrand",
-  },
-  {
-    icon: "Vegan",
-    name: "Acmelogo",
+    icon: "MessageSquareWarning",
+    name: "职场PUA",
   },
   {
     icon: "Ghost",
-    name: "Acmesponsor",
+    name: "阴阳怪气",
   },
   {
-    icon: "Puzzle",
-    name: "Acmeipsum",
+    icon: "Bomb",
+    name: "道德绑架",
   },
   {
-    icon: "Squirrel",
-    name: "Acme",
+    icon: "EarOff",
+    name: "无理取闹",
   },
   {
-    icon: "Cookie",
-    name: "Accmee",
+    icon: "Swords",
+    name: "正面硬刚",
+  },
+  {
+    icon: "Zap",
+    name: "逻辑压制",
   },
   {
     icon: "Drama",
-    name: "Acmetech",
+    name: "发疯文学",
   },
 ];
 
 export const SponsorsSection = () => {
   return (
     <section id="sponsors" className="max-w-[75%] mx-auto pb-24 sm:pb-32">
-      <h2 className="text-lg md:text-xl text-center mb-6">
-        Our Platinum Sponsors
+      <h2 className="text-lg md:text-xl text-center mb-6 text-muted-foreground">
+        专治各种不服 · 覆盖全场景对话难题
       </h2>
 
       <div className="mx-auto">
@@ -57,12 +57,11 @@ export const SponsorsSection = () => {
           {sponsors.map(({ icon, name }) => (
             <div
               key={name}
-              className="flex items-center text-xl md:text-2xl font-medium"
+              className="flex items-center text-xl md:text-2xl font-medium text-muted-foreground/80"
             >
               <Icon
                 name={icon as keyof typeof icons}
                 size={32}
-                color="white"
                 className="mr-2"
               />
               {name}
