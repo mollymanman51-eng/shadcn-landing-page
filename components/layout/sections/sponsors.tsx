@@ -12,7 +12,7 @@ interface sponsorsProps {
 const sponsors: sponsorsProps[] = [
   {
     icon: "MessageSquareWarning",
-    name: "职场PUA",
+    name: "职场PU",
   },
   {
     icon: "Ghost",
