@@ -1,0 +1,68 @@
+
+# Cursor Rules - Next.js & Shadcn UI Project
+
+## 1. 项目概况 (Project Context)
+- **项目名称**: AI 嘴替 (AI Argument Helper)
+- **核心功能**: 基于 Google Gemini 模型，根据用户输入的冲突内容，生成不同风格（温柔、严肃、阴阳、霸气、发疯）的回怼文案。
+- **技术栈**: 
+  - Next.js 14+ (App Router)
+  - TypeScript
+  - Tailwind CSS
+  - Shadcn UI (Radix UI)
+  - Lucide React
+- **部署平台**: Vercel
+
+## 2. 核心开发规范
+- **组件化**: 
+  - 页面组件放在 `app/`。
+  - 业务逻辑组件放在 `components/layout/sections/`。
+  - 通用 UI 组件放在 `components/ui/`。
+  - **原则**: UI 组件负责展示，业务组件负责逻辑和状态，页面组件负责数据获取和布局。
+- **类型安全**: 
+  - 严禁使用 `any`。
+  - 必须定义 Interface，如 `interface Props { ... }`。
+  - API 返回的数据必须有明确的类型定义 (e.g. `interface Reply { content: string; context: string }`)。
+- **服务端组件 (RSC)**:
+  - 默认使用 Server Components。
+  - 仅在需要 `useState`, `useEffect`, `onClick` 等交互时使用 `"use client"`。
+
+## 3. 代码风格指南
+- **导入顺序**: 
+  1. React / Next.js 内置模块
+  2. 第三方库 (lucide-react, etc.)
+  3. 本地组件 (`@/components/...`)
+  4. 本地工具/类型 (`@/lib/...`)
+  5. 样式文件
+- **命名规范**:
+  - 组件文件: `kebab-case` (e.g., `argument-form.tsx`)
+  - 组件名称: `PascalCase` (e.g., `ArgumentForm`)
+  - 变量/函数: `camelCase` (e.g., `handleGenerate`, `isLoading`)
+  - 常量: `UPPER_SNAKE_CASE` (e.g., `DEFAULT_TONE_LEVEL`)
+- **样式 (Tailwind)**:
+  - 使用 `cn()` 合并类名。
+  - 尽量使用 Tailwind 的简写类名 (e.g., `px-4` 而不是 `padding-left-4 padding-right-4`)。
+  - 颜色必须使用 CSS 变量引用 (e.g., `bg-primary`, `text-muted-foreground`) 以支持暗色模式。
+
+## 4. 业务逻辑与安全
+- **API Key 安全**: 
+  - 绝对禁止在前端代码中硬编码 API Key。
+  - 所有 AI 生成请求必须经过 `app/api/generate/route.ts` 转发。
+  - 环境变量命名为 `OPENROUTER_API_KEY`。
+- **Tone (语气) 管理**:
+  - 所有语气风格定义在 `lib/tone.ts` 中。
+  - 新增风格时，必须同步更新 `TonePreset` 类型和 `tonePresets` 对象。
+
+## 5. 常用路径别名
+- `@/*`: 映射到项目根目录 `./*`。
+  - e.g., `import { Button } from "@/components/ui/button"`
+
+## 6. Git 与 部署
+- **提交规范**: `git commit -m "Type: Description"` (e.g., `feat: Add crazy mode tone`)
+- **自动部署**: 推送到 `main` 分支会自动触发 Vercel 部署。
+- **配置文件**: 
+  - `vercel.json`: 定义构建和安装命令。
+  - `.env.local`: 本地开发环境变量（不提交到 Git）。
+
+## 7. 文档与页面
+- 新增页面必须包含 `metadata` 导出，用于 SEO。
+- 页面底部必须包含 Footer 链接。
